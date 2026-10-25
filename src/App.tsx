@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import OverviewPage from "./OverviewPage";
+import { BrowserRouter, Route, Routes } from "react-router";
+
+import OverviewPage from "./OverviewPage.tsx";
 import DocumentationPage from "./DocumentationPage";
+import Navbar from "./Navbar";
 
 import "./App.css";
 
@@ -8,6 +11,7 @@ export default function App() {
   const [activePage, setActivePage] = useState("Overview");
 
   return (
+    <BrowserRouter>
     <div
       style={{
         width: "100vw",
@@ -21,9 +25,14 @@ export default function App() {
     >
 
       {/* Container for the active page to take up remaining height */}
-      <div style={{ flex: 1, position: "relative", overflow: "hidden" }}>
-        <OverviewPage />
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<div style={{ flex: 1, position: "relative", overflow: "hidden" }}>
+            <OverviewPage />
+          </div>} />
+          <Route path="/docs" element={<DocumentationPage />} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }

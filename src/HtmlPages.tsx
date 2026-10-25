@@ -1,7 +1,6 @@
 import React from "react";
 import { Scroll, useScroll } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
-import { NAVBAR_HEIGHT } from "./Navbar";
 import { scrollTopForPage } from "./scrollUtils";
 
 export function HtmlPages() {
@@ -11,7 +10,6 @@ export function HtmlPages() {
   const pageStyle: React.CSSProperties = {
     height: pageHeight,
     boxSizing: "border-box",
-    paddingTop: NAVBAR_HEIGHT,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",

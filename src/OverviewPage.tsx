@@ -9,6 +9,7 @@ import {
 } from "@react-three/drei";
 import * as THREE from "three";
 import laptop from "./assets/laptop.png";
+import Navbar from "./Navbar";
 // import video from "./assets/spiritedaway (1).mp4";
 // Drei maps the scroll container's full scroll range to offset 0..1 and moves the
 // HTML layer by (pages - 1) * canvasHeight * offset. So page i is centered exactly
@@ -116,9 +117,9 @@ function HtmlPages() {
   // ---- Carousel (page 2) ----
   const CAROUSEL_PAGE = 1; // zero-based index of the page holding the carousel
   const cards = [
-    { title: "What is Codon?" },
-    { title: "How does it work?" },
-    { title: "What is its impact?" },
+    { title: "What is Codon?", body: "Codon is a radical JS flavour that prioritises token efficiency above all else. It is inspired by J, an array based programming language with mathematically compact properties. It is a language with evolution at its core, leveraging continual statistical analysis of other languages and self-analysis to shrink token count." },
+    { title: "How does it work?", body: "Just like the three base pairs that make up a codon, we utilise a three-pronged strategy for maximum token-efficiency: the unintuitive non-Javascript philosophy, statistical fingerprinting of modules in written Javascript, and an iterative adversarial network that continually fine-tunes design decisions." },
+    { title: "What is its impact?", body: "Codon is a project that is inherently designed with its own continual evolution in mind. Beyond its daily syntactical micro-iterations, we plan to severe Codon's ties to Javascript and eventually expand the standard to have equivalent representations in all of the largest languages in the world such as Python, C++, and Rust. Additionally, we plan to fine-tune Gemini to write Codon at an expert level without wasting tokens reading the Codon codebase or documentation." },
   ];
   const n = cards.length;
   const [active, setActive] = useState(0); // index of the card in the center
@@ -184,8 +185,8 @@ function HtmlPages() {
       <div style={pageStyle} className="cardContainer">
         {ordered.map((c) => (
           <div className="card" key={c.title}>
-            <h1>{c.title}</h1>
-            <p></p>
+            <h1>{c.title}</h1><br />
+            <p>{c.body}</p>
           </div>
         ))}
       </div>
@@ -219,7 +220,7 @@ function HtmlPages() {
           />
 
           <video
-            src={video}
+            //src={video}
             autoPlay
             muted
             loop

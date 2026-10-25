@@ -80,7 +80,6 @@ export function DnaModel() {
           color="black"
           anchorX="left"
           anchorY="middle"
-          material-blending={THREE.DifferenceBlending}
           material-depthTest={false}
           renderOrder={1}
         >
@@ -92,7 +91,6 @@ export function DnaModel() {
           color="black"
           anchorX="right"
           anchorY="middle"
-          material-blending={THREE.DifferenceBlending}
           material-depthTest={false}
           renderOrder={1}
         >
@@ -104,7 +102,6 @@ export function DnaModel() {
           color="black"
           anchorX="center"
           anchorY="middle"
-          material-blending={THREE.DifferenceBlending}
           material-depthTest={false}
           renderOrder={1}
         >
