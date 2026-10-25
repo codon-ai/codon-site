@@ -1,13 +1,17 @@
-import React from "react";
 import Markdown from "react-markdown";
-import Navbar from "./Navbar";
 
-const md = ``;
+import { useEffect, useState } from "react";
 
 export default function DocumentationPage() {
+  let [md, setMd] = useState("");
+  useEffect(function (){
+    fetch("/public/README.md")
+      .then((res) => res.text())
+      .then(text => setMd(text));
+  }, []);
   return (
     <div id="markdown">
-      <Markdown>{"# Hello World\nThis is **markdown**."}</Markdown>
+      <Markdown>{md}</Markdown>
     </div>
   );
 }

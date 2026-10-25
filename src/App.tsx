@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 
 import OverviewPage from "./OverviewPage.tsx";
@@ -8,8 +7,6 @@ import Navbar from "./Navbar";
 import "./App.css";
 
 export default function App() {
-  const [activePage, setActivePage] = useState("Overview");
-
   return (
     <BrowserRouter>
     <div

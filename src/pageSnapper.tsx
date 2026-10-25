@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useScroll } from "@react-three/drei";
-import { maxScroll, pageFromScroll, scrollTopForPage } from "./scrollUtils";
+import { pageFromScroll, scrollTopForPage } from "./scrollUtils";
 
 export function PageSnapper() {
   const scroll = useScroll();

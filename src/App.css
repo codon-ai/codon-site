@@ -53,7 +53,7 @@
   font-size: 2vh;
   white-space: pre;
   will-change: transform;
-  animation: nucleotide-scroll 600s linear infinite;
+  animation: nucleotide-scroll 1800s linear infinite;
 }
 
 .row-nucleotide.reverse {

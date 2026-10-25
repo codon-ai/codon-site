@@ -5,11 +5,9 @@ import {
   Scroll,
   useScroll,
   useGLTF,
-  Text,
 } from "@react-three/drei";
 import * as THREE from "three";
 import laptop from "./assets/laptop.png";
-import Navbar from "./Navbar";
 // import video from "./assets/spiritedaway (1).mp4";
 // Drei maps the scroll container's full scroll range to offset 0..1 and moves the
 // HTML layer by (pages - 1) * canvasHeight * offset. So page i is centered exactly
@@ -154,16 +152,6 @@ function HtmlPages() {
     justifyContent: "center",
     pointerEvents: "none",
     position:"relative",
-  };
-
-  // Programmatic scroll function triggered by your actions
-  const scrollToPage = (pageIndex: number) => {
-    if (scroll.el) {
-      scroll.el.scrollTo({
-        top: scrollTopForPage(scroll.el, scroll.pages, pageIndex),
-        behavior: "smooth",
-      });
-    }
   };
 
   return (

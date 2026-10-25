@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const CODON_LEN = 3;
 const NUM_CODONS = 500;
