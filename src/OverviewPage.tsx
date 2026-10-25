@@ -8,7 +8,7 @@ import {
 } from "@react-three/drei";
 import * as THREE from "three";
 import laptop from "./assets/laptop.png";
-// import video from "./assets/spiritedaway (1).mp4";
+import video from "./assets/video.mp4";
 // Drei maps the scroll container's full scroll range to offset 0..1 and moves the
 // HTML layer by (pages - 1) * canvasHeight * offset. So page i is centered exactly
 // when offset = i / (pages - 1). These helpers use that same mapping, so scroll
@@ -182,13 +182,11 @@ function HtmlPages() {
       {/* Page 3 */}
       <div style={pageStyle}>
         <div id="page3" style={{alignContent:"center"}}>
-          <h1 style={{textShadow:"0 4px 4px #6ACEF6", fontSize:"150px", textAlign:"center", fontFamily:"Host Grotesk",margin:0}}><span style={{fontFamily:"Instrument Serif",fontWeight: "400"}}>Codon</span> Optimized</h1>
-          <h3 style={{fontFamily:"Instrument Serif",fontSize:"100px",fontWeight:400,textAlign:"center",margin:0}}>vs</h3>
-          <h1 style={{fontSize:"150px", textAlign:"center", fontWeight:400, fontFamily:"Host Grotesk",margin:0}}>Base Gemini</h1>
+          <h1 style={{textShadow:"0 4px 4px #6ACEF6", fontSize:"150px", textAlign:"center", fontFamily:"Host Grotesk",margin:0}}><span style={{fontFamily:"Instrument Serif",fontWeight: "400"}}>Codon</span></h1>
+          <h3 style={{fontFamily:"Instrument Serif",fontSize:"100px",fontWeight:400,textAlign:"center",margin:0}}>Iterative</h3>
+          <h1 style={{fontSize:"150px", textAlign:"center", fontWeight:400, fontFamily:"Host Grotesk",margin:0}}>Improvement</h1>
           </div>        
       </div>
-
-      {/* Page 4 */}
       {/* Page 4 */}
       <div style={pageStyle}>
         <div
@@ -206,25 +204,16 @@ function HtmlPages() {
               display: "block",
             }}
           />
-
-          <video
-            //src={video}
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls
-            style={{
-              position: "absolute",
-              top: "46.5%",
-              left: "49.4%",
-              transform: "translate(-50%, -50%)",
-              width: "75.5%",
-              height: "auto",
-              zIndex: 2,
-              objectFit: "contain",
-            }}
-          />
+          <video src={video} autoPlay loop muted style={{
+            position: "absolute",
+            top: 643,
+            left: 189,
+            width: 1211,
+            height: 759,
+            objectFit: "cover",
+            objectPosition: "left",
+            opacity: 1
+          }} />
         </div>
       </div>
     </Scroll>
