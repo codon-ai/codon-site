@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
-import LandingPage from "./LandingPage";
 import OverviewPage from "./OverviewPage";
 import DocumentationPage from "./DocumentationPage";
+
+import "./App.css";
 
 export default function App() {
   const [activePage, setActivePage] = useState("Overview");
@@ -19,13 +19,10 @@ export default function App() {
         fontFamily: "system-ui, -apple-system, sans-serif",
       }}
     >
-      <Navbar activePage={activePage} setActivePage={setActivePage} />
 
       {/* Container for the active page to take up remaining height */}
       <div style={{ flex: 1, position: "relative", overflow: "hidden" }}>
-        {activePage === "Demonstration" && <LandingPage />}
-        {activePage === "Overview" && <OverviewPage />}
-        {activePage === "Documentation" && <DocumentationPage />}
+        <OverviewPage />
       </div>
     </div>
   );
